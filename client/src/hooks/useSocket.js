@@ -10,6 +10,7 @@ let socket = null;
 export const getSocket = () => socket;
 
 // Call this ONCE at the App level
+console.log('Socket URL:', import.meta.env.VITE_SOCKET_URL);
 export const useSocketInit = () => {
   const { token, user } = useAuthStore();
   const { addNotification } = useNotificationStore();
