@@ -17,7 +17,7 @@ const app = express();
 
 // CORS
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: process.env.CLIENT_URL || 'https://studyhive-app.onrender.com',
   credentials: true,
 }));
 
