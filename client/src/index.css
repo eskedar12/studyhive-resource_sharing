@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #0a0f1e;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0d1425;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1e3a5f;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sky-500 hover:bg-sky-400 text-white font-semibold px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-semibold px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer;
+  }
+
+  .card {
+    @apply bg-[#0d1425] border border-slate-800 rounded-xl p-5;
+  }
+
+  .tag-badge {
+    @apply bg-[#1a2640] text-sky-400 text-xs font-medium px-3 py-1 rounded-full border border-sky-900/40;
+  }
+
+  .input-field {
+    @apply bg-[#111827] border border-slate-700 rounded-lg px-4 py-2 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors w-full;
+  }
+}
